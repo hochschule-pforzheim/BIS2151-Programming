@@ -3,8 +3,11 @@
 This is the repository of the programming tutorial BIS2151.
 
 ## Usage
+### Download
+Feel free to download the entire NetBeans project and use in the way you wish. 
+### Where are the classes?
+You can find the .java files under this folder location: build/classes/tutorial/
 
-U can download the entire NetBeans project and use it as you wish. 
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
