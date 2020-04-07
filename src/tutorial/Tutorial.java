@@ -21,6 +21,9 @@ public class Tutorial
         // try-catch conversion test
         String input = "123";
         conversion(input);
+        
+        // running the code from testat 1   
+        testat1.Viruscalculator.run(args);
     }
     
     public static void conversion(String input)
