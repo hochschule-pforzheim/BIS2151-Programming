@@ -18,7 +18,8 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | --- | --- |
 | 24.03. & 26.03. | Primitive types • Classes • Methods • Return values |
 | 31.03. & 02.04. | Creating objects • Constructors • Getter & Setter • Try & Catch |
-| 07.04. & 09.04. | Layout of classes • JavaDoc • Review of Testat-1 (on 09.04. there is no tutorial due to national holiday!) |
+| 07.04. & 16.04. | Layout of classes • JavaDoc • Review of Testat-1 |
+
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
