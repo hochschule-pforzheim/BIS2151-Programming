@@ -21,7 +21,7 @@ public class BookManager
     public void go()
     {  
         // The Job of a book manager
-        tutorial.Student s = new tutorial.Student();
+        testat0.Student s = new testat0.Student();
         s.nextSemester();
         System.out.println("The student is");
         System.out.println(s);

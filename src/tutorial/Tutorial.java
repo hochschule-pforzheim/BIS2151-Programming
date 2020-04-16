@@ -1,5 +1,7 @@
 package tutorial;
 
+import testat0.Student;
+
 /**
  * Tutorial BIS2151
  * @author ainzone

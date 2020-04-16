@@ -1,28 +1,36 @@
-package tutorial;
+package testat0;
 
 /**
- * Tutorial BIS2151
+ * Lecture BIS2151
+ *
  * @author ainzone
  * @author wernerburkard
- * @version 1.1
+ * @version 1.2
  */
 public class Student
 {
-    // --- class attributes ---
+
+    private static int numberOfStudents;
+
+    public static int getNumberOfStudents()
+    {
+        return numberOfStudents;
+    }
+
     private String prename;
     private String surname;
-    private char state;         // R=regular, I=internship, V=vacation, A=abroad
+    private char state; // R=regular, I=internship, V=vacation, A=abroad
     // current Semester 1-30: student is immatriculated
-    // currentSemester  100+ x : student concludes successfully in semster x
+    // currentSemester  100+ x : student concluded successfully in semester x
     // curentSemester  -100- x : student failed after semester x
     private int currentSemester;
-    private boolean european; // if it is an european citizen
+    private boolean european; // true, if it is an european citizen
 
-    // --- constructors ---
+    // Constructors
     public Student()
     {
         // this is the default constructor
-        this("Max", "Mustermann", 'R', (byte) 1, true);
+        this("Max", "Mustermann", 'R', 1, true);
     }
 
     public Student(String prename, String surname, char state, int currentSemester, boolean european)
@@ -32,9 +40,11 @@ public class Student
         this.state = state;
         this.currentSemester = currentSemester;
         this.european = european;
+
+        numberOfStudents++;  // we have one student more!
     }
 
-    // --- getter and setter methods ---
+    // getter and setter methods
     public char getState()
     {
         return state;
@@ -64,7 +74,7 @@ public class Student
     {
         this.european = european;
     }
-
+    
     public String getPrename()
     {
         return prename;
@@ -72,7 +82,7 @@ public class Student
 
     public void setPrename(String prename)
     {
-        if (prename.equals("John Jackson"))
+        if (!prename.equals("John Jackson"))
         {
             this.prename = prename;
         }
@@ -88,20 +98,22 @@ public class Student
         this.surname = surname;
     }
 
-    public void nextSemester()
+    public int nextSemester()
     {
         // switches the student to the next semester
         if (state != 'V')
         {
             ++currentSemester;
         }
+        return currentSemester;
     }
 
-    public void goInternship()
+    public char goInternship()
     {
         state = 'I';
-        // another way:
+        // alternative way:
         this.setState('I');
+        return state;
     }
 
     public void successfulConclusion()
@@ -128,7 +140,7 @@ public class Student
         if (isEuropean())
         {
             me = me + " (European)";
-        } 
+        }
         else
         {
             me = me + " (from abroad)";
