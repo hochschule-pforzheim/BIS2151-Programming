@@ -2,9 +2,15 @@ package testat2;
 
 import java.util.Arrays;
 
-public class LottoMachineTester {
+/**
+ * @author mustii82
+ * @version 1.0
+ */
+public class LottoMachineTester 
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
 
         // Lets Create a new lottoMachine
         LottoMachine lottoMachine = new LottoMachine();
@@ -33,8 +39,8 @@ public class LottoMachineTester {
         System.out.println("As you can see Numbers are sorted thanks to our toString() implementation");
     }
 
-    public static String getLottoMachineArrayString(LottoMachine lottoMachine) {
+    public static String getLottoMachineArrayString(LottoMachine lottoMachine) 
+    {
         return Arrays.toString(lottoMachine.getLottoNumbers());
     }
-
 }
