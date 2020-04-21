@@ -1,6 +1,6 @@
 # BIS2151 'Introduction in Programming' SS2020
 
-This is the repository of the programming lecture and tutorial BIS2151.
+This is the repository of the programming lecture and tutorial BIS2151 at Pforzheim University in Summer Semester 2020.
 
 <img alt="Lecture" src="https://img.shields.io/badge/Lecture-BIS2151-red?style=for-the-badge"> <img alt="Semester" src="https://img.shields.io/badge/Semester-SS2020-yellow?style=for-the-badge"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ainzone/BIS2151-Programming?color=informational&style=for-the-badge"> <img alt="GitHub" src="https://img.shields.io/github/license/ainzone/BIS2151-Programming?style=for-the-badge"> 
 
