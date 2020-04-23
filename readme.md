@@ -23,6 +23,7 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 31.03. & 02.04. | Creating objects • Constructors • Getter & Setter • Try & Catch |
 | 07.04. & 16.04. | Layout of classes • JavaDoc • Review of Testat-1 |
 | 21.04. & 23.04. | Review of Testat-2 • solutions for the most common mistakes |
+| 28.04. & 30.04. | ArrayList<> • switch() & case • calling Classes |
 
 
 ## Important notice
