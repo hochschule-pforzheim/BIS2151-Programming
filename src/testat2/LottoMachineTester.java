@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class LottoMachineTester 
 {
 
-    public static void main(String[] args) 
+    public static void runLottoMachineTester() 
     {
 
         // Lets Create a new lottoMachine
