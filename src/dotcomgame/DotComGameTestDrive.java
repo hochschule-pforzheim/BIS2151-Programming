@@ -2,17 +2,20 @@ package dotcomgame;
 
 public class DotComGameTestDrive 
 {
-    public static void main(String[] args)
+    public static void runDotComGameTest()
     {
         DotCom dotcmom = new DotCom(); 
-        int[] locations = {2,3,4}; 
+        int[] locations = { 2,3,4 }; 
         dotcmom.setLocations(locations); 
         
         String userGuess = "2";
         String result = dotcmom.checkYourself(userGuess); 
         
         String testResult = "Test failed!";
-        if(result.equals("hit")) testResult = "Test passed!"; 
+        if(result.equals("hit"))
+        {
+            testResult = "Test passed!";
+        } 
         
         System.out.println(testResult);
     }

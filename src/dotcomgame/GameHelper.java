@@ -18,9 +18,9 @@ public class GameHelper
                 int i = Integer.parseInt(input); 
                 validInput = true; 
             }
-            catch(NumberFormatException ex)
+            catch(NumberFormatException nfe)
             {
-                System.out.println("Bitte eine Zahl eingeben.");
+                System.out.printf("Please give any number: ");
             }
         }
         return input; 

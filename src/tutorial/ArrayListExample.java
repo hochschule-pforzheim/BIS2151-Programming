@@ -9,11 +9,15 @@ import java.util.*;
  */
 public class ArrayListExample
 {
+    
     /**
      * Simply runs the example for ArrayList in Java.
      */
     public static void runExample()
     {
+        System.out.println("┌───────────────────────────────────────────┐");
+        System.out.println("│             ArrayList Example             │");
+        System.out.println("└───────────────────────────────────────────┘");
         // size of our ArrayList
         int n = 5; 
   

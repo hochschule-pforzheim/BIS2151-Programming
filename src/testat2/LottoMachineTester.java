@@ -11,7 +11,9 @@ public class LottoMachineTester
 
     public static void runLottoMachineTester() 
     {
-
+        System.out.println("┌───────────────────────────────────────────┐");
+        System.out.println("│                 Testat 2                  │");
+        System.out.println("└───────────────────────────────────────────┘");
         // Lets Create a new lottoMachine
         LottoMachine lottoMachine = new LottoMachine();
 

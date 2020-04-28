@@ -1,41 +1,44 @@
 package dotcomgame;
 
-public class DotCom 
+public class DotCom
 {
-    private int [] locationCells; 
-    private int numOfHits = 0; 
 
-    public int[] getLocations() {
+    private int[] locationCells;
+    private int numOfHits = 0;
+
+    public int[] getLocations()
+    {
         return locationCells;
     }
 
-    public void setLocations(int[] locations) {
+    public void setLocations(int[] locations)
+    {
         this.locationCells = locations;
     }
-    
+
     public String checkYourself(String userGuess)
     {
-        int guess = Integer.parseInt(userGuess); 
-        String result = "miss"; 
-        
-        for(int cell: locationCells)
+        int guess = Integer.parseInt(userGuess);
+        String result = "miss";
+
+        for (int cell : locationCells)
         {
-            if(guess == cell)
+            if (guess == cell)
             {
-                result = "hit"; 
-                numOfHits++; 
-                //hier fehlt noch etwas
-                break; 
+                result = "hit";
+                numOfHits++;
+                // here is missing something
+                break;
             }
         }
-        
-        if(numOfHits == locationCells.length)
+
+        if (numOfHits == locationCells.length)
         {
-            result = "kill"; 
+            result = "kill";
         }
-        
+
         System.out.println(result);
-        
-        return result; 
+
+        return result;
     }
 }

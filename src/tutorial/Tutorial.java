@@ -53,6 +53,8 @@ public class Tutorial
         System.out.println("│ (5) run 'ArrayList example'               │");
         System.out.println("│ (6) run 'Dot-Com-Game'                    │");
         System.out.println("└───────────────────────────────────────────┘");
+        System.out.println("");
+        System.out.printf("Your selection: ");
 
         Scanner input = new Scanner(System.in);
         boolean validInput = false;
@@ -66,7 +68,7 @@ public class Tutorial
                 validInput = true;
             } catch (NumberFormatException nfe)
             {
-                System.out.println("Enter a number please: ");
+                System.out.printf("Enter a number please: ");
             }
         }
         return selection;
@@ -111,7 +113,8 @@ public class Tutorial
                 break;
 
             case 6:
-                
+                dotcomgame.DotComGame.gameStart();
+                break;
                 
             default:
                 System.exit(0);
