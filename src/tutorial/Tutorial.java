@@ -65,10 +65,14 @@ public class Tutorial
             try
             {
                 selection = Integer.parseInt(input.nextLine());
+                if ((selection < 0) ||  (selection > 6)) 
+                {
+                    throw new NumberFormatException(); 
+                }
                 validInput = true;
             } catch (NumberFormatException nfe)
             {
-                System.out.printf("Enter a number please: ");
+                System.out.printf("Enter a number (0 - 6) please : ");
             }
         }
         return selection;
