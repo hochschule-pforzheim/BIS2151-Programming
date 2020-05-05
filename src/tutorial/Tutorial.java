@@ -52,6 +52,8 @@ public class Tutorial
         System.out.println("│ (4) run 'Testat 2'                        │");
         System.out.println("│ (5) run 'ArrayList example'               │");
         System.out.println("│ (6) run 'Dot-Com-Game'                    │");
+        System.out.println("│ (7) run 'Double Wrapper'                  │");
+        System.out.println("│ (8) run 'Bike Manager'                    │");
         System.out.println("└───────────────────────────────────────────┘");
         System.out.println("");
         System.out.printf("Your selection: ");
@@ -65,14 +67,14 @@ public class Tutorial
             try
             {
                 selection = Integer.parseInt(input.nextLine());
-                if ((selection < 0) ||  (selection > 6)) 
+                if ((selection < 0) || (selection > 8))
                 {
-                    throw new NumberFormatException(); 
+                    throw new NumberFormatException();
                 }
                 validInput = true;
             } catch (NumberFormatException nfe)
             {
-                System.out.printf("Enter a number (0 - 6) please : ");
+                System.out.printf("Enter a number (0 - 8) please : ");
             }
         }
         return selection;
@@ -119,10 +121,29 @@ public class Tutorial
             case 6:
                 dotcomgame.DotComGame.gameStart();
                 break;
-                
+
+            case 7:
+                doubleExample();
+                break;
+
+            case 8:
+                bikemanager.BikeManager.startBikeManager();
+                break;
+
             default:
                 System.exit(0);
                 break;
         }
+    }
+
+    public static void doubleExample()
+    {
+        double myNewDouble = 5.5;
+        System.out.println(myNewDouble);
+        Double mySecondDouble = new Double(5.5);
+        System.out.println(mySecondDouble);
+
+        ArrayList<Double> myDoubleArray = new ArrayList<Double>();
+        myDoubleArray.add(mySecondDouble);
     }
 }
