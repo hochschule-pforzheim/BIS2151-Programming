@@ -25,6 +25,7 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 21.04. & 23.04. | Review of Testat-2 • solutions for the most common mistakes |
 | 28.04. & 30.04. | ArrayList<> • switch and case statements • 'sink a dot-com' game |
 | 05.05. & 07.05. | ArrayList<> Part 2 • Programming bike-business | 
+| 12.05. & 14.05. | Java GUI with Swing • Event Handling and GUIs • GUI example | 
 
 
 ## Important notice
