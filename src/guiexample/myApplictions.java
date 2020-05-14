@@ -5,6 +5,8 @@
  */
 package guiexample;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jonathan Hinkel
@@ -97,7 +99,7 @@ public class myApplictions extends javax.swing.JFrame {
             .addGroup(myFirstPanelLayout.createSequentialGroup()
                 .addGap(169, 169, 169)
                 .addComponent(labelFirstPanel)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         myFirstPanelLayout.setVerticalGroup(
             myFirstPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,6 +166,11 @@ public class myApplictions extends javax.swing.JFrame {
 
         aboutMenuItem.setMnemonic('a');
         aboutMenuItem.setText("About");
+        aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aboutMenuItemActionPerformed(evt);
+            }
+        });
         helpMenu.add(aboutMenuItem);
 
         menuBar.add(helpMenu);
@@ -241,6 +248,10 @@ public class myApplictions extends javax.swing.JFrame {
     private void myTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_myTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_myTextFieldActionPerformed
+
+    private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
+        JOptionPane.showMessageDialog(rootPane, "Hier stehen Informationen über das Programm.", "Info", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_aboutMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
