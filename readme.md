@@ -26,7 +26,7 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 28.04. & 30.04. | ArrayList<> • switch and case statements • 'sink a dot-com' game |
 | 05.05. & 07.05. | ArrayList<> Part 2 • Programming bike-business | 
 | 12.05. & 14.05. | Java GUI with Swing • Event Handling and GUIs • GUI example | 
-
+| 19.05. & 21.05. | *No tutorial as there is no lecture and national holiday* | 
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
