@@ -8,6 +8,11 @@ public class BikeManager
 
     private final static ArrayList<Bike> BIKES = new ArrayList<Bike>();
 
+    public static ArrayList getBIKES()
+    {
+        return BIKES;
+    }
+
     public static void startBikeManager()
     {
         BikeTester.startTest();
@@ -30,8 +35,7 @@ public class BikeManager
             if (currentBike.getBikeID() == givenID)
             {
                 return currentBike;
-            } 
-            else
+            } else
             {
                 System.out.println("The given ID has not been found! Please give an other value!");
             }
