@@ -12,12 +12,14 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Jonathan Hinkel
  */
-public class TableDialog extends javax.swing.JDialog {
+public class TableDialog extends javax.swing.JDialog
+{
 
     /**
      * Creates new form TableDialog
      */
-    public TableDialog(java.awt.Frame parent, boolean modal) {
+    public TableDialog(java.awt.Frame parent, boolean modal)
+    {
         super(parent, modal);
         initComponents();
         fillTableData();
@@ -143,28 +145,30 @@ public class TableDialog extends javax.swing.JDialog {
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         String stringId = idField.getText();
-        int id; 
-        try 
+        int id;
+        try
         {
-            id = Integer.parseInt(stringId); 
-        } catch (Exception e) 
-        {
-           id = 0; 
+            id = Integer.parseInt(stringId);
         }
-        String desc = descriptionField.getText(); 
+        catch (Exception e)
+        {
+            id = 0;
+        }
+        String desc = descriptionField.getText();
         String stringPrice = PriceField.getText();
-        double price; 
-        try 
+        double price;
+        try
         {
-            price = Double.parseDouble(stringPrice); 
-        } catch (Exception e) 
-        {
-           price = 0; 
+            price = Double.parseDouble(stringPrice);
         }
-        Bike newBike = new Bike(id, desc, price); 
-        BikeManager.getBikeList().add(newBike); 
-        Object[] rowData = new Object[3]; 
-        rowData[0] = id; 
+        catch (Exception e)
+        {
+            price = 0;
+        }
+        Bike newBike = new Bike(id, desc, price);
+        BikeManager.getBikeList().add(newBike);
+        Object[] rowData = new Object[3];
+        rowData[0] = id;
         rowData[1] = desc;
         rowData[2] = price;
         DefaultTableModel model = (DefaultTableModel) bikeTable.getModel();
@@ -174,61 +178,76 @@ public class TableDialog extends javax.swing.JDialog {
     private void fillTableData()
     {
         DefaultTableModel model = (DefaultTableModel) bikeTable.getModel();
-        ArrayList<Bike> bikes = BikeManager.getBikeList(); 
+        ArrayList<Bike> bikes = BikeManager.getBikeList();
         //create demo data 
-        Bike bike1 = new Bike(1, "Bike1", 1.5); 
-        Bike bike2 = new Bike(2, "Bike2", 2.5); 
-        Bike bike3 = new Bike(3, "Bike3", 3.5); 
-        bikes.add(bike1); 
+        Bike bike1 = new Bike(1, "Bike1", 1.5);
+        Bike bike2 = new Bike(2, "Bike2", 2.5);
+        Bike bike3 = new Bike(3, "Bike3", 3.5);
+        bikes.add(bike1);
         bikes.add(bike2);
         bikes.add(bike3);
         //filling table 
-        Object rowData[] = new Object[3]; 
-        for(Bike bike : bikes)
+        Object rowData[] = new Object[3];
+        for (Bike bike : bikes)
         {
-            rowData[0] = bike.getBikeID(); 
-            rowData[1] = bike.getDescription(); 
-            rowData[2] = bike.getBikePrice(); 
+            rowData[0] = bike.getBikeID();
+            rowData[1] = bike.getDescription();
+            rowData[2] = bike.getBikePrice();
             model.addRow(rowData);
         }
-        
+
     }
-    
-    
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+        try
+        {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+            {
+                if ("Nimbus".equals(info.getName()))
+                {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        }
+        catch (ClassNotFoundException ex)
+        {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
+        }
+        catch (InstantiationException ex)
+        {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        }
+        catch (IllegalAccessException ex)
+        {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        }
+        catch (javax.swing.UnsupportedLookAndFeelException ex)
+        {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
                 TableDialog dialog = new TableDialog(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                dialog.addWindowListener(new java.awt.event.WindowAdapter()
+                {
                     @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
+                    public void windowClosing(java.awt.event.WindowEvent e)
+                    {
                         System.exit(0);
                     }
                 });
