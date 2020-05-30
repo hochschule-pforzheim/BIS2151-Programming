@@ -27,6 +27,8 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 05.05. & 07.05. | ArrayList<> Part 2 • Programming bike-business | 
 | 12.05. & 14.05. | Java GUI with Swing • Event Handling and GUIs • GUI example | 
 | 19.05. & 21.05. | *No tutorial as there is no lecture and national holiday* | 
+| 26.05. & 28.05. | Java dialogs • JTable Part I  | 
+| 02.06. & 04.06. | *No scheduled tutorial as there is lecture free time* • Video Tutorial JTable Part II | 
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
