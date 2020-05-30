@@ -23,6 +23,11 @@ public class BikeManager
         BIKES.add(new Bike(givenID, givenDescription, givenBikePrice));
     }
 
+    public static ArrayList getBikeList()
+    {
+        return BIKES;
+    }
+    
     public static Bike readBike(int givenID)
     {
         for (Bike currentBike : BIKES)
