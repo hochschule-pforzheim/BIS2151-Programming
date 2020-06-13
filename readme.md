@@ -29,6 +29,10 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 19.05. & 21.05. | *No tutorial as there is no lecture and national holiday* | 
 | 26.05. & 28.05. | Java dialogs • JTable Part I  | 
 | 02.06. & 04.06. | *No scheduled tutorial as there is lecture free time* • Video Tutorial JTable Part II | 
+| 09.06. & 11.06. | Video Serialization Part I • Video Deserialization I | 
+| 16.06. & 18.06. | Video Serialization Part II • Video Deserialization II | 
+| 23.06. & 25.06. | Q&A Serialization • Exam Preparation I | 
+| 30.06. & 02.07. | Exam Preparation II | 
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
