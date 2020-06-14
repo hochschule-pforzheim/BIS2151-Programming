@@ -10,18 +10,27 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
+<<<<<<< HEAD
  * @author andi
+=======
+ * @author Jonathan Hinkel
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
  */
 public class TableDialog extends javax.swing.JDialog
 {
 
     /**
+<<<<<<< HEAD
      * Creates new form NewJDialog
+=======
+     * Creates new form TableDialog
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
      */
     public TableDialog(java.awt.Frame parent, boolean modal)
     {
         super(parent, modal);
         initComponents();
+<<<<<<< HEAD
         addRowToJTable();
     }
 
@@ -44,6 +53,9 @@ public class TableDialog extends javax.swing.JDialog
             rowData[2] = bikes.get(i).getBikePrice();
             model.addRow(rowData);
         }
+=======
+        fillTableData();
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
     }
 
     /**
@@ -53,6 +65,7 @@ public class TableDialog extends javax.swing.JDialog
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+<<<<<<< HEAD
     private void initComponents()
     {
 
@@ -101,29 +114,190 @@ public class TableDialog extends javax.swing.JDialog
             }
         });
         jScrollPane2.setViewportView(contentTable);
+=======
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        bikeTable = new javax.swing.JTable();
+        PriceField = new javax.swing.JTextField();
+        idField = new javax.swing.JTextField();
+        descriptionField = new javax.swing.JTextField();
+        addButton = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel1.setText("Bike Table");
+
+        bikeTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Description", "Price"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(bikeTable);
+
+        PriceField.setText(" ");
+        PriceField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PriceFieldActionPerformed(evt);
+            }
+        });
+
+        idField.setText(" ");
+        idField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idFieldActionPerformed(evt);
+            }
+        });
+
+        descriptionField.setText(" ");
+        descriptionField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                descriptionFieldActionPerformed(evt);
+            }
+        });
+
+        addButton.setText("Add");
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButtonActionPerformed(evt);
+            }
+        });
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addGap(76, 76, 76)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
+=======
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(235, 235, 235)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(descriptionField, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(PriceField, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(addButton)
+                .addGap(76, 76, 76))
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
+<<<<<<< HEAD
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PriceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(descriptionField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+=======
+    private void PriceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PriceFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PriceFieldActionPerformed
+
+    private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idFieldActionPerformed
+
+    private void descriptionFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descriptionFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_descriptionFieldActionPerformed
+
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+        String stringId = idField.getText();
+        int id;
+        try
+        {
+            id = Integer.parseInt(stringId);
+        }
+        catch (Exception e)
+        {
+            id = 0;
+        }
+        String desc = descriptionField.getText();
+        String stringPrice = PriceField.getText();
+        double price;
+        try
+        {
+            price = Double.parseDouble(stringPrice);
+        }
+        catch (Exception e)
+        {
+            price = 0;
+        }
+        Bike newBike = new Bike(id, desc, price);
+        BikeManager.getBikeList().add(newBike);
+        Object[] rowData = new Object[3];
+        rowData[0] = id;
+        rowData[1] = desc;
+        rowData[2] = price;
+        DefaultTableModel model = (DefaultTableModel) bikeTable.getModel();
+        model.addRow(rowData);
+    }//GEN-LAST:event_addButtonActionPerformed
+
+    private void fillTableData()
+    {
+        DefaultTableModel model = (DefaultTableModel) bikeTable.getModel();
+        ArrayList<Bike> bikes = BikeManager.getBikeList();
+        //create demo data 
+        Bike bike1 = new Bike(1, "Bike1", 1.5);
+        Bike bike2 = new Bike(2, "Bike2", 2.5);
+        Bike bike3 = new Bike(3, "Bike3", 3.5);
+        bikes.add(bike1);
+        bikes.add(bike2);
+        bikes.add(bike3);
+        //filling table 
+        Object rowData[] = new Object[3];
+        for (Bike bike : bikes)
+        {
+            rowData[0] = bike.getBikeID();
+            rowData[1] = bike.getDescription();
+            rowData[2] = bike.getBikePrice();
+            model.addRow(rowData);
+        }
+
+    }
+
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
     /**
      * @param args the command line arguments
      */
@@ -144,6 +318,7 @@ public class TableDialog extends javax.swing.JDialog
                     break;
                 }
             }
+<<<<<<< HEAD
         } catch (ClassNotFoundException ex)
         {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -154,11 +329,30 @@ public class TableDialog extends javax.swing.JDialog
         {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex)
+=======
+        }
+        catch (ClassNotFoundException ex)
+        {
+            java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        catch (InstantiationException ex)
+        {
+            java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        catch (IllegalAccessException ex)
+        {
+            java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        catch (javax.swing.UnsupportedLookAndFeelException ex)
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
         {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+<<<<<<< HEAD
         //</editor-fold>
+=======
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable()
@@ -180,10 +374,20 @@ public class TableDialog extends javax.swing.JDialog
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JTable contentTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+=======
+    private javax.swing.JTextField PriceField;
+    private javax.swing.JButton addButton;
+    private javax.swing.JTable bikeTable;
+    private javax.swing.JTextField descriptionField;
+    private javax.swing.JTextField idField;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+>>>>>>> d1399b7350bb8bd712c42be3f16efda1e7cb7519
     // End of variables declaration//GEN-END:variables
 }
