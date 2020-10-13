@@ -19,7 +19,7 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 ## Tutorial schedule & topics
 | Date | Topics |
 | --- | --- |
-| Oct 13th | git & GitHub • introduction to classes and methods |
+| Oct 13th | Git & GitHub • introduction to classes and methods |
 | Oct 20th | _no live tutorial but video on-demand_ • getter and setter • constructor • try & catch |
 | Oct 27th | layout of classes • introduction to JavaDoc • review of attestation #1 |
 
