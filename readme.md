@@ -17,13 +17,13 @@ You can take a look at the code without downloading any files by browsing into t
 Prof. Burkard is willing uploading the content from the lecture in this repository, too! You can find his content primary in the package 'testat0' but also in 'tutorial' 
 
 ## Tutorial schedule & topics
-| Date | Topics |
-| --- | --- |
-| Oct 13th | Git & GitHub • introduction to classes and methods |
-| Oct 20th | getter and setter • constructor • try & catch |
-| Oct 27th | layout of classes • introduction to JavaDoc • review of attestation #1 |
-| Nov 03rd | ArrayList • switch statement • review layout of classes |
-| Nov 10th | object-orientation • planning a structure for attestation #3 • review of attestation #2 |
+| № | Date | Topics |
+| --- | --- | --- |
+| 1 | Oct 13th | Git & GitHub • introduction to classes and methods |
+| 2 | Oct 20th | getter and setter • constructor • try & catch |
+| 3 | Oct 27th | layout of classes • introduction to JavaDoc • review of attestation #1 |
+| 4 | Nov 03rd | ArrayList • switch statement • review layout of classes |
+| 5 | Nov 10th | object-orientation • planning a structure for attestation #3 • review of attestation #2 |
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
