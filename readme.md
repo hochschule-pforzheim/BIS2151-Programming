@@ -22,8 +22,11 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 01 | Oct 13th | Git & GitHub • introduction to classes and methods |
 | 02 | Oct 20th | getter and setter • constructor • try & catch |
 | 03 | Oct 27th | layout of classes • introduction to JavaDoc • review of attestation #1 |
-| 04 | Nov 03rd | ArrayList • switch statement • review layout of classes |
+| 04 | Nov 03rd | ArrayList<> • switch statement • review layout of classes |
 | 05 | Nov 10th | object-orientation • planning a structure for attestation #3 • review of attestation #2 |
+| 06 | Nov 17th | ArrayList<> Review | Wrapper Classes | Q&A |
+| 07 | Nov 24th | _tbd_ |
+
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
