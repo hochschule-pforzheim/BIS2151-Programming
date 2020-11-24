@@ -25,7 +25,7 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 04 | Nov 03rd | ArrayList<> • switch statement • review layout of classes |
 | 05 | Nov 10th | object-orientation • planning a structure for attestation #3 • review of attestation #2 |
 | 06 | Nov 17th | ArrayList<> Review • Wrapper Classes • Q&A |
-| 07 | Nov 24th | Input Control • Code examples •  Introduction GUI •Event handling |
+| 07 | Nov 24th | Input Control • Code examples •  Introduction GUI • Event handling |
 | 08 | Dec 01st | _no live tutorial! (link in Moodle)_ • Graphical User Interface • JTable • CRUD within GUIs |
 | 09 | Dec 08th | Graphical User Interface • CRUD within GUIs • JOptionPane |
 | 10 | Dec 15th | Serialization & Deserialization |
