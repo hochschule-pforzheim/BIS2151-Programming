@@ -22,8 +22,16 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 01 | Oct 13th | Git & GitHub • introduction to classes and methods |
 | 02 | Oct 20th | getter and setter • constructor • try & catch |
 | 03 | Oct 27th | layout of classes • introduction to JavaDoc • review of attestation #1 |
-| 04 | Nov 03rd | ArrayList • switch statement • review layout of classes |
+| 04 | Nov 03rd | ArrayList<> • switch statement • review layout of classes |
 | 05 | Nov 10th | object-orientation • planning a structure for attestation #3 • review of attestation #2 |
+| 06 | Nov 17th | ArrayList<> Review • Wrapper Classes • Q&A |
+| 07 | Nov 24th | Input Control • Code examples •  Introduction GUI • Event handling |
+| 08 | Dec 01st | _no live tutorial! (link in Moodle)_ • Graphical User Interface • JTable • CRUD within GUIs |
+| 09 | Dec 08th | Graphical User Interface • CRUD within GUIs • JOptionPane |
+| 10 | Dec 15th | Serialization & Deserialization |
+| 11 | Dec 22nd | _no live tutorial! (link in Moodle)_ • SQLite Databases with GUIs |
+| 12 | Jan 12th | Exam preparation pt I |
+| 13 | Jan 19th | Exam preparation pt II |
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
