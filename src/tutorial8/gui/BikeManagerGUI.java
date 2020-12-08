@@ -35,6 +35,13 @@ public class BikeManagerGUI extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         buttonStartDialog.setText("Start Dialog");
+        buttonStartDialog.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                buttonStartDialogActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -55,6 +62,11 @@ public class BikeManagerGUI extends javax.swing.JFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonStartDialogActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_buttonStartDialogActionPerformed
+    {//GEN-HEADEREND:event_buttonStartDialogActionPerformed
+       
+    }//GEN-LAST:event_buttonStartDialogActionPerformed
 
     /**
      * @param args the command line arguments

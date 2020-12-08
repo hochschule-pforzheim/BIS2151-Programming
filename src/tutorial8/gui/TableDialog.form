@@ -23,32 +23,32 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" alignment="0" pref="400" max="32767" attributes="0"/>
+          <Component id="jScrollPane1" alignment="0" pref="391" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="textDescription" min="-2" pref="100" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="buttonCreate" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonCreate" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="textPrice" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="buttonUpdate" min="-2" pref="100" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="buttonDelete" min="-2" pref="100" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="textPrice" max="32767" attributes="0"/>
+                              <Component id="textDescription" pref="165" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="buttonDelete" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="buttonUpdate" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -73,7 +73,7 @@
                   <Component id="buttonDelete" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="buttonUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="177" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -154,9 +154,15 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Create"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCreateActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonDelete">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
       <Events>

@@ -45,6 +45,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Start Dialog"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonStartDialogActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

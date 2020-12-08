@@ -6,8 +6,10 @@
 package tutorial8.gui;
 
 import java.util.ArrayList;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import tutorial8.logic.Bike;
+import tutorial8.logic.*;
 
 /**
  *
@@ -25,6 +27,11 @@ public class TableDialog extends javax.swing.JDialog
         initComponents();
         // what if the dialog will be used multiple times? Does it add multiple times the entries?
         addRowToJTable();
+    }
+
+    TableDialog()
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public void addRowToJTable()
@@ -125,7 +132,15 @@ public class TableDialog extends javax.swing.JDialog
         textPrice.setText("Price");
 
         buttonCreate.setText("Create");
+        buttonCreate.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                buttonCreateActionPerformed(evt);
+            }
+        });
 
+        buttonDelete.setBackground(new java.awt.Color(255, 102, 102));
         buttonDelete.setText("Delete");
         buttonDelete.addActionListener(new java.awt.event.ActionListener()
         {
@@ -148,27 +163,26 @@ public class TableDialog extends javax.swing.JDialog
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(textDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(buttonCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)
+                            .addComponent(buttonCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(40, 40, 40)
-                                .addComponent(textPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonDelete)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonUpdate)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(buttonUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(buttonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(textPrice)
+                                .addComponent(textDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,7 +202,7 @@ public class TableDialog extends javax.swing.JDialog
                     .addComponent(buttonCreate)
                     .addComponent(buttonDelete)
                     .addComponent(buttonUpdate))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -202,8 +216,7 @@ public class TableDialog extends javax.swing.JDialog
         if (i >= 0)
         {
             model.removeRow(i);
-        }
-        else
+        } else
         {
             // add some additional error display!
             System.out.println("Delete Error!");
@@ -229,13 +242,35 @@ public class TableDialog extends javax.swing.JDialog
         {
             double price = Double.parseDouble(inputPrice);
             model.setValueAt(price, i, 2);
-        }
-        catch (NumberFormatException nfe)
+        } catch (NumberFormatException nfe)
         {
             // Try using better exception handling!
             System.out.println("Error converting!");
         }
     }//GEN-LAST:event_buttonUpdateActionPerformed
+
+    private void buttonCreateActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_buttonCreateActionPerformed
+    {//GEN-HEADEREND:event_buttonCreateActionPerformed
+        DefaultTableModel model = (DefaultTableModel) tableBike.getModel();
+        String description = textDescription.getText();
+        double price = 0.0;
+        try
+        {
+            price = Double.parseDouble(textPrice.getText());
+            Bike localbikes = new Bike(description, price);
+            Object rowData[] = new Object[3];
+
+            rowData[0] = localbikes.getBikeID();
+            rowData[1] = localbikes.getBikeDescription();
+            rowData[2] = localbikes.getBikePrice();
+
+            model.addRow(rowData);
+        } catch (NumberFormatException nfe)
+        {
+            JOptionPane.showMessageDialog(new JFrame(), "Error with converting to String \n" + nfe.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_buttonCreateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,20 +292,16 @@ public class TableDialog extends javax.swing.JDialog
                     break;
                 }
             }
-        }
-        catch (ClassNotFoundException ex)
+        } catch (ClassNotFoundException ex)
         {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        catch (InstantiationException ex)
+        } catch (InstantiationException ex)
         {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        catch (IllegalAccessException ex)
+        } catch (IllegalAccessException ex)
         {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        catch (javax.swing.UnsupportedLookAndFeelException ex)
+        } catch (javax.swing.UnsupportedLookAndFeelException ex)
         {
             java.util.logging.Logger.getLogger(TableDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
