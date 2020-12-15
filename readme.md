@@ -29,7 +29,7 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 08 | Dec 01st | _no live tutorial! (link in Moodle)_ • Graphical User Interface • JTable • CRUD within GUIs |
 | 09 | Dec 08th | Graphical User Interface • CRUD within GUIs • JOptionPane |
 | 10 | Dec 15th | Q&A attestation #4  • simple tasks with GUIs |
-| 11 | Dec 22nd | _no live tutorial! (link in Moodle)_ • Serialization & Deserialization • SQLite Databases with GUIs |
+| 11 | Dec 22nd | Serialization & Deserialization • SQLite Databases with GUIs |
 | 12 | Jan 12th | Exam preparation pt I |
 | 13 | Jan 19th | Exam preparation pt II |
 
