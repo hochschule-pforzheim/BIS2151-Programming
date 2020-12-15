@@ -28,8 +28,8 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 07 | Nov 24th | Input Control • Code examples •  Introduction GUI • Event handling |
 | 08 | Dec 01st | _no live tutorial! (link in Moodle)_ • Graphical User Interface • JTable • CRUD within GUIs |
 | 09 | Dec 08th | Graphical User Interface • CRUD within GUIs • JOptionPane |
-| 10 | Dec 15th | Serialization & Deserialization |
-| 11 | Dec 22nd | _no live tutorial! (link in Moodle)_ • SQLite Databases with GUIs |
+| 10 | Dec 15th | Q&A attestation #4  • simple tasks with GUIs |
+| 11 | Dec 22nd | _no live tutorial! (link in Moodle)_ • Serialization & Deserialization • SQLite Databases with GUIs |
 | 12 | Jan 12th | Exam preparation pt I |
 | 13 | Jan 19th | Exam preparation pt II |
 
