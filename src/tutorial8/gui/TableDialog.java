@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tutorial8.gui;
 
 import java.util.ArrayList;
@@ -12,7 +7,7 @@ import javax.swing.table.DefaultTableModel;
 import tutorial8.logic.*;
 
 /**
- *
+ * @version 1.1
  * @author Ainz
  */
 public class TableDialog extends javax.swing.JDialog
@@ -34,6 +29,9 @@ public class TableDialog extends javax.swing.JDialog
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     *
+     */
     public void addRowToJTable()
     {
         DefaultTableModel model = (DefaultTableModel) tableBike.getModel();
@@ -121,7 +119,7 @@ public class TableDialog extends javax.swing.JDialog
         });
         jScrollPane1.setViewportView(tableBike);
 
-        jLabel1.setText("Welcome to the video tutorial");
+        jLabel1.setText("Welcome to tutorial 10 on Dec 15th");
 
         jLabel2.setText("Bike Description:");
 
@@ -167,7 +165,6 @@ public class TableDialog extends javax.swing.JDialog
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -181,7 +178,10 @@ public class TableDialog extends javax.swing.JDialog
                                 .addComponent(buttonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(textPrice)
-                                .addComponent(textDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)))))
+                                .addComponent(textDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -267,9 +267,8 @@ public class TableDialog extends javax.swing.JDialog
             model.addRow(rowData);
         } catch (NumberFormatException nfe)
         {
-            JOptionPane.showMessageDialog(new JFrame(), "Error with converting to String \n" + nfe.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error with converting to String \n" + nfe.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);
         }
-
     }//GEN-LAST:event_buttonCreateActionPerformed
 
     /**

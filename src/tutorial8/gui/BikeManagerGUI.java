@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tutorial8.gui;
 
 /**
- *
+ * @version 1.1
  * @author Ainz
  */
 public class BikeManagerGUI extends javax.swing.JFrame
@@ -63,9 +58,11 @@ public class BikeManagerGUI extends javax.swing.JFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void buttonStartDialogActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_buttonStartDialogActionPerformed
     {//GEN-HEADEREND:event_buttonStartDialogActionPerformed
-       
+        TableDialog td = new TableDialog(this, true);
+        td.setVisible(true);
     }//GEN-LAST:event_buttonStartDialogActionPerformed
 
     /**
