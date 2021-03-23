@@ -21,7 +21,7 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | --- | --- | --- |
 | 01 | Mar 23rd | introduction to classes and methods • if-conditions • loops |
 | 02 | Mar 30th | getter and setter • constructor • try & catch |
-| 03 | Apr 06th | layout of classes • introduction to JavaDoc |
+| 03 | Apr 06th | _no tutorial on this date due to vacation_ |
 | 04 | Apr 13th | ArrayList<> • switch statement • review layout of classes |
 | 05 | Apr 20th | object-orientation • planning a structure for advanced attestations |
 
