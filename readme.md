@@ -23,7 +23,9 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 02 | Mar 30th | getter and setter • constructor • try & catch |
 | -- | Apr 06th | _no tutorial on this date due to vacation_ |
 | 03 | Apr 13th | JavaDoc • review layout of classes |
-| 04 | Apr 20th | object-orientation • planning a structure for attestations |
+| 04 | Apr 20th | object-orientation • planning a structure for attestations • coding exercise |
+| 05 | Apr 27th | ArrayList<> • Switch-Statement • Sink-a-Dot-Com exercise |
+| -- | May 04th | _no tutorial on this date due to excursion week_ |
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
