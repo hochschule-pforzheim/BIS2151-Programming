@@ -24,8 +24,9 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | -- | Apr 06th | _no tutorial on this date due to vacation_ |
 | 03 | Apr 13th | JavaDoc • review layout of classes |
 | 04 | Apr 20th | object-orientation • planning a structure for attestations • coding exercise |
-| 05 | Apr 27th | ArrayList<> • Switch-Statement • Sink-a-Dot-Com exercise |
+| 05 | Apr 27th | ArrayList<> • Switch-Statement • coding exercise |
 | 06 | May 04th | Git & GitHub • _no regular tutorial on this date due to excursion week_ |
+| 07 | May 11th | ArrayList<> Repetition • Object-Orientation • coding exercise |
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
