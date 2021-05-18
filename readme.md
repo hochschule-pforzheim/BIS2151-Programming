@@ -27,6 +27,9 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 05 | Apr 27th | ArrayList<> • Switch-Statement • coding exercise |
 | 06 | May 04th | Git & GitHub • _no regular tutorial on this date due to excursion week_ |
 | 07 | May 11th | ArrayList<> Repetition • Object-Orientation • coding exercise |
+| 08 | May 18th | Java Swing GUI • jTable • UML-Diagramme |
+| -- | May 25th | _no tutorial on this date due to vacation_ |
+
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
