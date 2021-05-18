@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tuorial08.GUI;
+package tutorial08.GUI;
 
-import tuorial08.logic.Bike;
-import tuorial08.logic.BikeManager;
+import tutorial08.logic.Bike;
+import tutorial08.logic.BikeManager;
 
 /**
  *
