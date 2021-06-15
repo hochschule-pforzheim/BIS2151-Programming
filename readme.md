@@ -30,6 +30,9 @@ Prof. Burkard is willing uploading the content from the lecture in this reposito
 | 08 | May 18th | Java Swing GUI • JTable • UML-Diagram |
 | -- | May 25th | _no tutorial on this date due to vacation_ |
 | 09 | Jun 01st | Java Addressesing • UML-Diagram • JTable Repetition |
+| 10 | Jun 08th | Serialization |
+| 11 | Jun 15th | Exam Preparation I |
+| 12 | Jun 22nd | Exam Preparation II |
 
 ## Important notice
 We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
