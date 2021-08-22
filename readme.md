@@ -9,10 +9,8 @@ This is the repository of the programming lecture and tutorial BIS2151 (BWMI) / 
 
 ### Download
 Feel free to download the entire NetBeans project and use in the way you wish. 
-### Where are the classes?
-You can find the .class files under this folder location: `build/classes/tutorial/`
 ### Where can I see the code online?
-You can take a look at the code without downloading any files by browsing into this folder location: `src/tutorial`
+You can take a look at the code without downloading any files by browsing into this folder location: `src/tutorial00`. The '00' determines for the number of each tutorial.
 ### Where can I find code from the lecture?
 Prof. Burkard is willing uploading the content from the lecture in this repository, too! You can find his content primary in the package 'testat0' but also in 'tutorial' 
 
