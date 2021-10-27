@@ -31,10 +31,6 @@ public class TEST_1 {
      */
     public static boolean calculateResult(int input) {
         int result = input % 2;
-        if(result == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return result == 0; 
     }
 }
