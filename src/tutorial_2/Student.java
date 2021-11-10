@@ -52,6 +52,7 @@ public class Student {
     }
     
     public static void registerForExam(int exam, String name) {
-        System.out.println("The student is now registered for exam: " + exam); 
+        System.out.println("The student is now registered for exam: " + exam);
+        StudentManager.GenerateStudents();
     }
 }
