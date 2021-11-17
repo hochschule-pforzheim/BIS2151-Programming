@@ -14,7 +14,8 @@ public class ArrayListExample {
     public static void main(String[] args) {
         ArrayList<Student> list = new ArrayList<>();
         
-        list.add(new Student("Jonathan Hinkel", 319123));
+        Student student1 = new Student("Jonathan Hinkel", 319123);
+        list.add(student1);
         list.add(new Student("John Grammaticus", 8721387));
         Student newStudent = new Student("Max Mustermann", 123123); 
         list.add(newStudent);
@@ -26,8 +27,6 @@ public class ArrayListExample {
         }
         list.remove(toRemove); 
         
-        
-        
         for(Student student : list) {
             System.out.println(student);
         }
@@ -35,5 +34,16 @@ public class ArrayListExample {
             System.out.println(list.get(i));
         }
         
+        Student testStudent = new Student("max mustermann", 123123123);
+        testStudent.SetState(Student.status.immatriculated);
+        System.out.println(testStudent);
+        System.out.println("" + Student.amountOfStudents);
+        
+        
+        StudentManager.getInstance().list.add(testStudent);
+        
+        //assadsa
+        
+        StudentManager.getInstance(); //same object as above
     }
 }
