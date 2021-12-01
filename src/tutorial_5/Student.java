@@ -58,4 +58,30 @@ public class Student {
         return this.state; 
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMatNr() {
+        return matNr;
+    }
+
+    public void setMatNr(int matNr) {
+        this.matNr = matNr;
+    }
+
+    public int getSemester() {
+        return semester;
+    }
+
+    public void setSemester(int semester) {
+        this.semester = semester;
+    }
+    
+    
+
 }
