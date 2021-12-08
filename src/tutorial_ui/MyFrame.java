@@ -23,29 +23,24 @@ public class MyFrame extends javax.swing.JFrame {
      */
     public MyFrame() {
         initComponents();
+        addDialog.setVisible(false);
         myManager.generateStudents();   // Generate some test Students
-        fillTable();    // Fill up the Table, when we start the Program
+        fillTable();
         mySecondPanel.setVisible(false);
     }
 
-    /**
-     * Fills up our Table with all the Objects, that are already existing in the
-     * ArrayList
-     */
-    public void fillTable() {
-        ArrayList<Student> students = myManager.getList();  // Declare an ArrayList filled with Objects of Class Student thorugh the method getList() from myManager, so we already have the ArrayList with the stored Objects 
+    private void fillTable() {
+        ArrayList<Student> studentList = myManager.getList();
+        DefaultTableModel model = (DefaultTableModel) studentTable.getModel();
 
-        DefaultTableModel model = (DefaultTableModel) studentTable.getModel();  // Get the TableModel of Table studentTable and cast it to type DefaultTableModel so we can use the methods
+        Object rowData[] = new Object[3];
 
-        Object rowData[] = new Object[3];   // Define an Array of Objects to give the JTable values: Each item represents one column
+        for (Student s : studentList) {
+            rowData[0] = s.getMatNr();
+            rowData[1] = s.getName();
+            rowData[2] = s.getSemester();
 
-        for (Student s : students) {    // For every student in our ArrayList, add it to our JTable 
-
-            rowData[0] = s.getMatNr();  // Column 1: Matriculation Number
-            rowData[1] = s.getName();   // Column 2: Name
-            rowData[2] = s.getSemester();   // Column 3: Semester
-
-            model.addRow(rowData);  // Add this Student through the Array of Objects to the JTable
+            model.addRow(rowData);
         }
 
     }
@@ -60,12 +55,23 @@ public class MyFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        addDialog = new javax.swing.JDialog();
+        matnrLabel = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
+        semesterLabel = new javax.swing.JLabel();
+        semesterTextField = new javax.swing.JTextField();
+        matnrTextField = new javax.swing.JTextField();
+        nameTextField = new javax.swing.JTextField();
+        okayButton = new javax.swing.JButton();
+        cancelButton = new javax.swing.JButton();
         myFirstButton = new javax.swing.JButton();
         mySecondPanel = new javax.swing.JPanel();
         buttonPanel2 = new javax.swing.JButton();
         myFirstPanel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        studentScrollPane = new javax.swing.JScrollPane();
         studentTable = new javax.swing.JTable();
+        addButton = new javax.swing.JButton();
+        deleteButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         fileMenuButton = new javax.swing.JMenu();
         closeButton = new javax.swing.JRadioButtonMenuItem();
@@ -73,6 +79,78 @@ public class MyFrame extends javax.swing.JFrame {
         editMenuButton = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
+
+        matnrLabel.setText("matnr");
+
+        nameLabel.setText("name");
+
+        semesterLabel.setText("semester");
+
+        okayButton.setText("okay");
+        okayButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okayButtonActionPerformed(evt);
+            }
+        });
+
+        cancelButton.setText("cancel");
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout addDialogLayout = new javax.swing.GroupLayout(addDialog.getContentPane());
+        addDialog.getContentPane().setLayout(addDialogLayout);
+        addDialogLayout.setHorizontalGroup(
+            addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addDialogLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(semesterLabel)
+                    .addComponent(matnrLabel)
+                    .addComponent(nameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addGroup(addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(semesterTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addDialogLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(okayButton)
+                .addGap(18, 18, 18)
+                .addComponent(cancelButton)
+                .addGap(20, 20, 20))
+            .addGroup(addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addDialogLayout.createSequentialGroup()
+                    .addContainerGap(151, Short.MAX_VALUE)
+                    .addComponent(matnrTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(51, 51, 51)))
+        );
+        addDialogLayout.setVerticalGroup(
+            addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addDialogLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(matnrLabel)
+                .addGap(24, 24, 24)
+                .addGroup(addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameLabel)
+                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(semesterLabel)
+                    .addComponent(semesterTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
+                .addGroup(addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(okayButton)
+                    .addComponent(cancelButton))
+                .addContainerGap())
+            .addGroup(addDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(addDialogLayout.createSequentialGroup()
+                    .addGap(26, 26, 26)
+                    .addComponent(matnrTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(252, Short.MAX_VALUE)))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,38 +190,53 @@ public class MyFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "matNr", "name", "semester"
+                "MatNr", "Name", "Semester"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, true, true
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
         });
-        jScrollPane1.setViewportView(studentTable);
+        studentScrollPane.setViewportView(studentTable);
 
         javax.swing.GroupLayout myFirstPanelLayout = new javax.swing.GroupLayout(myFirstPanel);
         myFirstPanel.setLayout(myFirstPanelLayout);
         myFirstPanelLayout.setHorizontalGroup(
             myFirstPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
-            .addGroup(myFirstPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(myFirstPanelLayout.createSequentialGroup()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 596, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(studentScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
         );
         myFirstPanelLayout.setVerticalGroup(
             myFirstPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 457, Short.MAX_VALUE)
-            .addGroup(myFirstPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(myFirstPanelLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(45, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, myFirstPanelLayout.createSequentialGroup()
+                .addContainerGap(263, Short.MAX_VALUE)
+                .addComponent(studentScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
+
+        addButton.setText("add");
+        addButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButtonActionPerformed(evt);
+            }
+        });
+
+        deleteButton.setText("delete");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         fileMenuButton.setText("File");
 
@@ -177,29 +270,32 @@ public class MyFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(deleteButton)
+                .addGap(18, 18, 18)
+                .addComponent(addButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(myFirstButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(myFirstPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(myFirstPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(112, 112, 112)
                     .addComponent(mySecondPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(137, Short.MAX_VALUE)))
+                    .addContainerGap(151, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(120, 120, 120)
                 .addComponent(myFirstPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(myFirstButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(myFirstButton)
+                    .addComponent(addButton)
+                    .addComponent(deleteButton)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(124, 124, 124)
                     .addComponent(mySecondPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(387, Short.MAX_VALUE)))
+                    .addContainerGap(670, Short.MAX_VALUE)))
         );
 
         pack();
@@ -222,6 +318,59 @@ public class MyFrame extends javax.swing.JFrame {
     private void buttonPanel2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPanel2ActionPerformed
         mySecondPanel.setVisible(false);
     }//GEN-LAST:event_buttonPanel2ActionPerformed
+
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+        addDialog.pack();
+        addDialog.setVisible(true);
+    }//GEN-LAST:event_addButtonActionPerformed
+
+    private void okayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okayButtonActionPerformed
+        ArrayList<Student> studentList = myManager.getList();
+        DefaultTableModel model = (DefaultTableModel) studentTable.getModel();
+
+        int matNr = Integer.parseInt(matnrTextField.getText());
+        String name = nameTextField.getText();
+        int semester = Integer.parseInt(semesterTextField.getText());
+
+        Student s = new Student(name, matNr);
+        s.setSemester(semester);
+
+        studentList.add(s);
+
+        Object[] rowData = new Object[3];
+        rowData[0] = s.getMatNr();
+        rowData[1] = s.getName();
+        rowData[2] = s.getSemester();
+
+        model.addRow(rowData);
+
+        matnrTextField.setText("");
+        nameTextField.setText("");
+        semesterTextField.setText("");
+        addDialog.setVisible(false);
+    }//GEN-LAST:event_okayButtonActionPerformed
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        matnrTextField.setText("");
+        nameTextField.setText("");
+        semesterTextField.setText("");
+        addDialog.setVisible(false);
+
+    }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        ArrayList<Student> studentList = myManager.getList();
+
+        DefaultTableModel model = (DefaultTableModel) studentTable.getModel();
+
+        int selectedRow = studentTable.getSelectedRow();
+        if (selectedRow < 0) {
+            System.out.println("Keine Zeile ausgewählt!");
+        } else {
+            studentList.remove(selectedRow);
+            model.removeRow(selectedRow);
+        }
+    }//GEN-LAST:event_deleteButtonActionPerformed
 
     private void switchPanels() {
         myFirstPanel.setVisible(!myFirstPanel.isVisible());
@@ -264,17 +413,28 @@ public class MyFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addButton;
+    private javax.swing.JDialog addDialog;
     private javax.swing.JButton buttonPanel2;
+    private javax.swing.JButton cancelButton;
     private javax.swing.JRadioButtonMenuItem closeButton;
+    private javax.swing.JButton deleteButton;
     private javax.swing.JMenu editMenuButton;
     private javax.swing.JMenu fileMenuButton;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel matnrLabel;
+    private javax.swing.JTextField matnrTextField;
     private javax.swing.JButton myFirstButton;
     private javax.swing.JPanel myFirstPanel;
     private javax.swing.JPanel mySecondPanel;
+    private javax.swing.JLabel nameLabel;
+    private javax.swing.JTextField nameTextField;
+    private javax.swing.JButton okayButton;
     private javax.swing.JMenuItem openDialog;
+    private javax.swing.JLabel semesterLabel;
+    private javax.swing.JTextField semesterTextField;
+    private javax.swing.JScrollPane studentScrollPane;
     private javax.swing.JTable studentTable;
     // End of variables declaration//GEN-END:variables
 }
