@@ -6,6 +6,7 @@
 package tutorial_ui;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import tutorial_5.Student;
 import tutorial_5.StudentManager;
@@ -328,34 +329,41 @@ public class MyFrame extends javax.swing.JFrame {
         ArrayList<Student> studentList = myManager.getList();
         DefaultTableModel model = (DefaultTableModel) studentTable.getModel();
 
-        int matNr = Integer.parseInt(matnrTextField.getText());
-        String name = nameTextField.getText();
-        int semester = Integer.parseInt(semesterTextField.getText());
+        try {
+            int matNr = Integer.parseInt(matnrTextField.getText());
+            String name = nameTextField.getText();
+            int semester = Integer.parseInt(semesterTextField.getText());
+            Student s = new Student(name, matNr);
+            s.setSemester(semester);
 
-        Student s = new Student(name, matNr);
-        s.setSemester(semester);
+            studentList.add(s);
 
-        studentList.add(s);
+            Object[] rowData = new Object[3];
+            rowData[0] = s.getMatNr();
+            rowData[1] = s.getName();
+            rowData[2] = s.getSemester();
 
-        Object[] rowData = new Object[3];
-        rowData[0] = s.getMatNr();
-        rowData[1] = s.getName();
-        rowData[2] = s.getSemester();
+            model.addRow(rowData);
 
-        model.addRow(rowData);
-
-        matnrTextField.setText("");
-        nameTextField.setText("");
-        semesterTextField.setText("");
-        addDialog.setVisible(false);
+            matnrTextField.setText("");
+            nameTextField.setText("");
+            semesterTextField.setText("");
+            addDialog.setVisible(false);
+        }
+        catch(NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid input", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_okayButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        matnrTextField.setText("");
-        nameTextField.setText("");
-        semesterTextField.setText("");
-        addDialog.setVisible(false);
-
+        Object[] options = {"Ja", "Nein"};
+        int selection = JOptionPane.showOptionDialog(this, "Wirklich schließen?", "Bestätigen", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);  
+        if(selection == 0) {
+            matnrTextField.setText("");
+            nameTextField.setText("");
+            semesterTextField.setText("");
+            addDialog.setVisible(false);
+        }
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
