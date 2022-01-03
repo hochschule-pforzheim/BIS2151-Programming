@@ -338,6 +338,7 @@ public class MyFrame extends javax.swing.JFrame {
 
             studentList.add(s);
 
+            //adds a new row to the table
             Object[] rowData = new Object[3];
             rowData[0] = s.getMatNr();
             rowData[1] = s.getName();
