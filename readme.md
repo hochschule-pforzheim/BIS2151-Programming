@@ -2,7 +2,7 @@
 
 This is the repository of the programming lecture and tutorial BIS2151 (BWMI) / BIS3071 (BDEM) at Pforzheim University in Winter Semester 2021/22.
 
-<img alt="Lecture BWMI" src="https://img.shields.io/badge/BWMI-BIS2151-red?style=for-the-badge"> <img alt="Lecture BDEM" src="https://img.shields.io/badge/BDEM-BIS3071-red?style=for-the-badge"> <img alt="Semester" src="https://img.shields.io/badge/Semester-WS2021/22-yellow?style=for-the-badge"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ainzone/BIS2151-Programming?color=informational&style=for-the-badge"> <img alt="GitHub" src="https://img.shields.io/github/license/ainzone/BIS2151-Programming?style=for-the-badge"> 
+<img alt="Lecture BWMI" src="https://img.shields.io/badge/BWMI-BIS2151-red?style=for-the-badge"> <img alt="Lecture BDEM" src="https://img.shields.io/badge/BDEM-BIS3071-red?style=for-the-badge"> <img alt="Semester" src="https://img.shields.io/badge/Semester-ST2022-yellow?style=for-the-badge"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ainzone/BIS2151-Programming?color=informational&style=for-the-badge"> <img alt="GitHub" src="https://img.shields.io/github/license/ainzone/BIS2151-Programming?style=for-the-badge"> 
 
 
 ## Usage
