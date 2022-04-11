@@ -4,6 +4,8 @@
  */
 package tutorial02;
 
+import tutorial03.Stauts;
+
 /**
  *
  * @author Jascha Pfäfflin
@@ -33,6 +35,8 @@ public class Main {
         
         //s1.vorname = "Jascha";
         s1.setVorname("Sandra");
+        
+        s1.setState(Stauts.IMPORTANT);
         
         //s.setMatrikelnr(323460);
         //s.setMatrikelnr((s.getMatrikelnr() + 1));
