@@ -8,7 +8,7 @@ package tutorial03;
  *
  * @author Jascha Pfäfflin
  */
-public enum Stauts {
+public enum Status {
     IMPORTANT,
     URGENT,
     PRIVATE;
