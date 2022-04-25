@@ -5,7 +5,7 @@
 package tutorial02;
 
 import java.util.Date;
-import tutorial03.Stauts;
+import tutorial03.Status;
 
 /**
  *
@@ -18,13 +18,13 @@ public class Student {
     private String nachname;
     private String studiengang;
     private static int counter = 0; // statisch und damit Teil der Klasse, unabhängig zum Objekt
-    private Stauts state;
+    private Status state;
 
-    public Stauts getState() {
+    public Status getState() {
         return state;
     }
 
-    public void setState(Stauts state) {
+    public void setState(Status state) {
         this.state = state;
     }
 
