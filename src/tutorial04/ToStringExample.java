@@ -25,7 +25,11 @@ public class ToStringExample {
         System.out.println(sm.studentList);
     }
 
-    private static void addStudent() {
+    
+    /**
+     * Fügt ein Student der ArrayList hinzu
+     */
+    public static void addStudent() {
         Student s = new Student(323461, Status.URGENT, "Jascha", 4);
         StudentManager sm = StudentManager.getInstance();
 
