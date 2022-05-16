@@ -23,6 +23,10 @@ public class Room {
         this.students = students;
     }
 
+    public Room() {
+        this.roomID = ++counter;
+    }
+
     public int getRoomID() {
         return roomID;
     }
@@ -47,9 +51,17 @@ public class Room {
         this.students = students;
     }
 
+    private String returnStudents() {
+        String output = "";
+        for (Student s : students) {
+            output += s.toString() + "\n";
+        }
+        return output;
+    }
+
     @Override
     public String toString() {
-        return "Room{" + "roomID=" + roomID + ", description=" + description + ", students=" + students + '}';
+        return "Room mit ID: "+ roomID + " hat die Beschreibung: " + description + " beinhaltet diese Studenten: \n" + this.returnStudents();
     }
 
 }
