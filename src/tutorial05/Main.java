@@ -5,6 +5,7 @@
 package tutorial05;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -27,14 +28,59 @@ public class Main {
         Room r = new Room("Wirtschaftsinformatik", sm);
         Room r2 = new Room("Informatik", sm);
         Room r3 = new Room("Wirtschaft", sm);
+        
+        Room r4 = new Room();
+        r4.setDescription("Mathematik");
+        r4.setStudents(sm);
+        
+        
 
-        RoomManager rm = new RoomManager();
+        RoomManager rm = RoomManager.getInstance();
 
         rm.addRoom(r);
         rm.addRoom(r2);
         rm.addRoom(r3);
+        rm.addRoom(r4);
 
         System.out.println(rm.readRooms());
+
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.print("ID zum Updaten eingeben: ");
+        String input = keyboard.nextLine();
+
+        while (!checkInput(input)) {
+            System.out.print("ID zum Updaten eingeben: ");
+            input = keyboard.nextLine();
+        }
+
+        int id = Integer.parseInt(input);
+
+        //rm.deleteRoomID(id);
+
+
+            System.out.print("Neue Description eingeben: ");
+            String newDescription = keyboard.nextLine();
+            
+            rm.updateDescription(id, newDescription);
+            
+
+        System.out.println(rm.readRooms());
+
+    }
+
+    private static boolean checkInput(String input) {
+        try {
+            int output = Integer.parseInt(input);
+            if (output <= 0) {
+                return false;
+            }
+
+            return true;
+
+        } catch (NumberFormatException ex) {
+            return false;
+        }
     }
 
 }
