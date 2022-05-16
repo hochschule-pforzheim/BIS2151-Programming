@@ -47,8 +47,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "studentID=" + studentID + ", name=" + name + ", semester=" + semester + '}';
+        return "Student mit ID: " + studentID + " hat den Namen: " + name + " ist im  Semester: " + semester;
     }
 
-    
 }
