@@ -47,9 +47,9 @@ public class RoomManager {
         }
          */
         for (Room r : rooms) {
-            output += r.toString() +"\n";
+            output += r.toString() + "\n";
         }
-        
+
         return output;
     }
 
@@ -81,4 +81,9 @@ public class RoomManager {
             r.setDescription(input);
         }
     }
+
+    public ArrayList<Room> getRooms() {
+        return rooms;
+    }
+
 }
