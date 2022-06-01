@@ -321,7 +321,13 @@ public class JTableExample extends javax.swing.JFrame {
 
         int row = roomTable.getSelectedRow();
 
-        if (row <= 0) {
+        try {
+            roomTable.convertRowIndexToModel(row);
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            row = -1;
+        }
+
+        if (row < 0) {
             JOptionPane.showMessageDialog(this, "No Row selected", "No Row selected", JOptionPane.ERROR_MESSAGE);
             return;
         } else {
