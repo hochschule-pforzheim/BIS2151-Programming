@@ -16,6 +16,7 @@ public class Room implements Serializable {
     private int roomID;
     private String description;
     private int amtSeats;
+    private static final long serialVerisionUID = 10l;
 
     public Room(String description, int amtSeats) {
 
