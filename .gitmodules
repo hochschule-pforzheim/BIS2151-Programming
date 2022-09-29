@@ -1,0 +1,6 @@
+[submodule "BIS2151-Archive"]
+	path = BIS2151-Archive
+	url = https://github.com/hochschule-pforzheim/BIS2151-Archive
+[submodule "BIS2151-Examples"]
+	path = BIS2151-Examples
+	url = https://github.com/hochschule-pforzheim/BIS2151-Examples
