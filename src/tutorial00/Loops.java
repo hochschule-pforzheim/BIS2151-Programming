@@ -51,6 +51,15 @@ public class Loops {
         for (int d : nums) {
             System.out.println("Value of d: " + d);
         }
+
+        System.out.println(args[0]);
+        System.out.println(args[1]);
+
+        System.out.println(args.length);
+
+        if (args.length > 0) {
+            System.out.println("Illegal arguments found!");
+        }
     }
 
 }
