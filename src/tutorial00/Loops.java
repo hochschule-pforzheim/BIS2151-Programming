@@ -21,7 +21,7 @@ public class Loops {
         int[] nums = {0, 1, 2};
 
         // while loop: Checks the condition, before executing
-        while (a < 3) {
+        while (a != 0 && a < 3) {
             System.out.println("Value of a: " + a);
             a++;
         }
@@ -32,7 +32,7 @@ public class Loops {
         do {
             System.out.println("Value of b: " + b);
             b++;
-        } while (b < 3);
+        } while (b != 0 && b < 3);
 
         System.out.println("---------------------");
 
