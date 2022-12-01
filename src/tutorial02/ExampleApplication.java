@@ -24,7 +24,7 @@ public class ExampleApplication extends javax.swing.JFrame {
      */
     private void switchPanels() {
         if (firstPanel.isVisible()) { // if the firstpanel is visible
-            firstPanel.setVisible(false); // set is as invisible
+            firstPanel.setVisible(false); // set it as invisible
             secondPanel.setVisible(true); // and set the second visible
         } else {
             secondPanel.setVisible(false); // otherwise vice versa
