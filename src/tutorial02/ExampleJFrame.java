@@ -61,13 +61,18 @@ public class ExampleJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void clickButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clickButtonActionPerformed
+        // With the use of constants of class JOptionPane, we can change the Icons, as well as the Options for ConfirmDialogs
+        
         JOptionPane.showMessageDialog(this, "Not implemented yet!", "Not implemented!", JOptionPane.INFORMATION_MESSAGE);
         
         int answer = JOptionPane.showConfirmDialog(this, "Yes or No?", "Yes or No?", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         
+        // With the constants we can also make it more readable, if the answer is equal to "Yes", "No" or "Cancel"
+        // If the answer is equal to "Yes", show a MessageDialog
         if (answer == JOptionPane.YES_OPTION) {
             JOptionPane.showMessageDialog(this, "You chose Yes!", "Yes!", JOptionPane.PLAIN_MESSAGE);
         }
+        // If the answer is equal to "No", ask why the User decided to do so
         if (answer == JOptionPane.NO_OPTION) {
             String text = JOptionPane.showInputDialog(this, "You chose No! Why?", "Why?", JOptionPane.QUESTION_MESSAGE);
             JOptionPane.showMessageDialog(this, text, "Your answer", JOptionPane.INFORMATION_MESSAGE);

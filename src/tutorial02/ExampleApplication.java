@@ -14,17 +14,20 @@ public class ExampleApplication extends javax.swing.JFrame {
      * Creates new form ExampleApplication
      */
     public ExampleApplication() {
-        initComponents();
-        secondPanel.setVisible(false);
-        this.setLocationRelativeTo(null);
+        initComponents(); // Create every Component of the generated Code
+        secondPanel.setVisible(false); // Set the second panel to be invisible
+        this.setLocationRelativeTo(null); //  Set the location of the Application in the middle of the screen
     }
-    
+
+    /**
+     * Switch the visibility of the two Panels.
+     */
     private void switchPanels() {
-        if(firstPanel.isVisible()) {
-            firstPanel.setVisible(false);
-            secondPanel.setVisible(true);
+        if (firstPanel.isVisible()) { // if the firstpanel is visible
+            firstPanel.setVisible(false); // set is as invisible
+            secondPanel.setVisible(true); // and set the second visible
         } else {
-            secondPanel.setVisible(false);
+            secondPanel.setVisible(false); // otherwise vice versa
             firstPanel.setVisible(true);
         }
     }
@@ -287,17 +290,17 @@ public class ExampleApplication extends javax.swing.JFrame {
     }//GEN-LAST:event_switchBackButtonActionPerformed
 
     private void printButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printButtonActionPerformed
-        printLabel.setText(printTextField.getText());
+        printLabel.setText(printTextField.getText()); // Get the Text from the TextField and replace the Text from our Label
     }//GEN-LAST:event_printButtonActionPerformed
 
     private void openDialogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openDialogButtonActionPerformed
-        exampleDialog.pack();
-        exampleDialog.setLocationRelativeTo(this);
-        exampleDialog.setVisible(true);
+        exampleDialog.pack(); // Set the Window to the preffered size
+        exampleDialog.setLocationRelativeTo(this); // Set the location in the middle of the main Application
+        exampleDialog.setVisible(true); // set is as visible
     }//GEN-LAST:event_openDialogButtonActionPerformed
 
     private void openSecondDialogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openSecondDialogButtonActionPerformed
-        ExampleJDialog dlg = new ExampleJDialog(this, true);
+        ExampleJDialog dlg = new ExampleJDialog(this, true); // Create an instance of our ExampleJDialog, which has this as a parent and has modal set to true
         dlg.pack();
         dlg.setLocationRelativeTo(this);
         dlg.setVisible(true);

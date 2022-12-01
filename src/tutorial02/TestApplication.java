@@ -5,7 +5,7 @@
 package tutorial02;
 
 /**
- *
+ * Nothing important, just for testing purposes!
  * @author Jascha Pfäfflin
  */
 public class TestApplication extends javax.swing.JFrame {
