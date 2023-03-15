@@ -1,8 +1,8 @@
-# BIS2151 'Introduction in Programming' ST 2022
+# BIS2151 'Introduction in Programming' ST 2023
 
-This is the repository of the programming lecture and tutorial BIS2151 (BWMI) / BIS3071 (BDEM) at Pforzheim University in Summer Term 2022.
+This is the repository of the programming lecture and tutorial BIS2151 (BWMI) / BIS3071 (BDEM) at Pforzheim University in Summer Term 2023.
 
-<img alt="Lecture BWMI" src="https://img.shields.io/badge/BWMI-BIS2151-red?style=for-the-badge"> <img alt="Lecture BDEM" src="https://img.shields.io/badge/BDEM-BIS3071-red?style=for-the-badge"> <img alt="Semester" src="https://img.shields.io/badge/Semester-WT2022/23-yellow?style=for-the-badge"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ainzone/BIS2151-Programming?color=informational&style=for-the-badge"> <img alt="GitHub" src="https://img.shields.io/github/license/ainzone/BIS2151-Programming?style=for-the-badge"> 
+<img alt="Lecture BWMI" src="https://img.shields.io/badge/BWMI-BIS2151-red?style=for-the-badge"> <img alt="Lecture BDEM" src="https://img.shields.io/badge/BDEM-BIS3071-red?style=for-the-badge"> <img alt="Semester" src="https://img.shields.io/badge/Semester-ST2023-yellow?style=for-the-badge"> <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/ainzone/BIS2151-Programming?color=informational&style=for-the-badge"> <img alt="GitHub" src="https://img.shields.io/github/license/ainzone/BIS2151-Programming?style=for-the-badge"> 
 
 
 ## Usage
@@ -19,4 +19,5 @@ Code from the lecture can either be found in the subfolder `/BIS2151-Examples` o
 Yes, indeed. Go head to the subfolder `/BIS2151-Archive` to find last semesters code.
 
 ## Important notice
-We accept no liability for the completeness of the content. The tutorial does not replace independent training and learning!
+- We accept no liability for the completeness of the content!
+- The tutorial does not replace independent training and learning!
