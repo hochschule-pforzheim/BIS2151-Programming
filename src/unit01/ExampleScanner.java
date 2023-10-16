@@ -1,4 +1,4 @@
-package hspf.unit01;
+package unit01;
 
 import java.util.Scanner;
 

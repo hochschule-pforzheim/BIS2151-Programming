@@ -1,4 +1,4 @@
-package hspf.unit01;
+package unit01;
 
 /**
  * Example class for args.
