@@ -9,14 +9,16 @@ class Car
 {
 
     // Attributes or properties
-    String colour;
-    String model;
+    private String colour;
+    private String model;
 
     // Constructor to initialize the object
     public Car(String colour, String model)
     {
+
         this.colour = colour;
         this.model = model;
+
     }
 
     // Method to start the car
@@ -29,5 +31,25 @@ class Car
     public void stopEngine()
     {
         System.out.println("Engine stopped!");
+    }
+
+    public String getColour()
+    {
+        return colour;
+    }
+
+    public void setColour(String colour)
+    {
+        this.colour = colour;
+    }
+
+    public String getModel()
+    {
+        return model;
+    }
+
+    public void setModel(String model)
+    {
+        this.model = model;
     }
 }
