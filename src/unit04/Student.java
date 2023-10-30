@@ -22,4 +22,22 @@ public class Student
         System.out.println("Studying ...");
         hoursOfStudy = hoursOfStudy - 1;
     }
+
+    public int getStudentID()
+    {
+        return studentID;
+    }
+
+    public Student()
+    {
+        // This is the null/default constructor
+    }
+
+    public Student(int studentID, String surname, String prename)
+    {
+        this.studentID = studentID;
+        this.surname = surname;
+        this.prename = prename;
+    }
+
 }
