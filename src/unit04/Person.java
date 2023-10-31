@@ -1,11 +1,18 @@
 package unit04;
 
+/**
+ * Example Class Person for the lecture.
+ *
+ * @author Andreas Schneider
+ */
 public class Person
 {
+
     public String prename, surname;
 
     public Person()
     {
+        // This is the default/null constructor
     }
 
     public Person(String prename, String surname)
@@ -33,7 +40,5 @@ public class Person
     {
         this.surname = surname;
     }
-    
-    
 
 }

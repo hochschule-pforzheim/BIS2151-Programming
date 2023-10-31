@@ -23,38 +23,41 @@ public class Student
         hoursOfStudy = hoursOfStudy - 1;
     }
 
-    public String getSurname() {
+    public String getSurname()
+    {
         return surname;
     }
 
-    public void setSurname(String surname) {
+    public void setSurname(String surname)
+    {
         this.surname = surname;
     }
 
-    public String getPrename() {
+    public String getPrename()
+    {
         return prename;
     }
 
-    public void setPrename(String prename) {
+    public void setPrename(String prename)
+    {
         this.prename = prename;
     }
 
-    
-    
-    public int getActualSemester() {
+    public int getActualSemester()
+    {
         return actualSemester;
     }
 
-    public void setActualSemester(int newSemester) {
+    public void setActualSemester(int newSemester)
+    {
         this.actualSemester = newSemester;
     }
-    
-    public void nextSemester() {
+
+    public void nextSemester()
+    {
         this.actualSemester++;
     }
 
-    
-    
     public int getStudentID()
     {
         return studentID;
