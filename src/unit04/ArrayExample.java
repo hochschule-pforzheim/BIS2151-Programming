@@ -19,9 +19,9 @@ public class ArrayExample
         students[2] = new Student(300002, "Jackson", "Tom");
 
         // Accessing and printing student information from the array
-        System.out.println("Student 1: Name - " + students[0].prename + " " + students[0].surname + " ID: " + students[0].getStudentID());
-        System.out.println("Student 2: Name - " + students[1].prename + " " + students[1].surname + " ID: " + students[1].getStudentID());
-        System.out.println("Student 2: Name - " + students[2].prename + " " + students[2].surname + " ID: " + students[2].getStudentID());
+        System.out.println("Student 1: Name - " + students[0].getPrename() + " " + students[0].getSurname() + " ID: " + students[0].getStudentID());
+        System.out.println("Student 2: Name - " + students[1].getPrename() + " " + students[1].getSurname() + " ID: " + students[1].getStudentID());
+        System.out.println("Student 2: Name - " + students[2].getPrename() + " " + students[2].getSurname() + " ID: " + students[2].getStudentID());
 
     }
 }
