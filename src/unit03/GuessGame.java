@@ -37,8 +37,7 @@ public class GuessGame
         int targetNumber = (int) (Math.random() * 10);
         System.out.println("I am thinking of a number between 0 and 9 ...");
 
-        while (true)
-        {
+        while (true) {
             System.out.println("Number to guess is " + targetNumber);
 
             // Call each player's guess() method
@@ -64,24 +63,20 @@ public class GuessGame
             If a player is right, then set that player's variable to be true 
             (remember, we set it false by default)
              */
-            if (guessp1 == targetNumber)
-            {
+            if (guessp1 == targetNumber) {
                 p1isRight = true;
             }
-            if (guessp2 == targetNumber)
-            {
+            if (guessp2 == targetNumber) {
                 p2isRight = true;
             }
-            if (guessp3 == targetNumber)
-            {
+            if (guessp3 == targetNumber) {
                 p3isRight = true;
             }
             /*
             If player one OR player two OR player three is right ... 
             (the || operator means "OR") 
              */
-            if (p1isRight || p2isRight || p3isRight)
-            {
+            if (p1isRight || p2isRight || p3isRight) {
                 System.out.println("We have a winner!");
                 System.out.println("Player one got it right? " + p1isRight);
                 System.out.println("Player two got it right? " + p2isRight);
@@ -89,8 +84,7 @@ public class GuessGame
                 System.out.println("Game is over.");
                 // game over, so break out of the loop
                 break;
-            } else
-            {
+            } else {
                 // we must keep going because nobody got it right!
                 System.out.println("Player will have to try again.");
             }

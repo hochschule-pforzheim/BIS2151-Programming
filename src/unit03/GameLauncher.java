@@ -11,7 +11,7 @@ package unit03;
 public class GameLauncher
 {
 
-    public static void main(String[] args)
+    public static void run(String[] args)
     {
         GuessGame game = new GuessGame();
         game.startGame();

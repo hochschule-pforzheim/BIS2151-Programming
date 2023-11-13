@@ -3,7 +3,7 @@ package unit01;
 public class DemoCalls
 {
 
-    public static void main(String[] args)
+    public static void run(String[] args)
     {
         hello();
         System.out.println(calculation());

@@ -8,7 +8,7 @@ package unit04;
 public class ArrayExample
 {
 
-    public static void main(String[] args)
+    public static void example()
     {
         // Creating an array of Student objects
         Student[] students = new Student[3];

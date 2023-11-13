@@ -8,11 +8,10 @@ package unit01;
 public class ExampleArgs
 {
 
-    public static void main(String[] args)
+    public static void run(String[] args)
     {
         // Check if there are enough command line arguments (name and age)
-        if (args.length < 2)
-        {
+        if (args.length < 2) {
             System.out.println("Usage: java Main <name> <age>");
             return;
         }
@@ -22,11 +21,9 @@ public class ExampleArgs
         int age = 0;
 
         // Parse age from the second command line argument
-        try
-        {
+        try {
             age = Integer.parseInt(args[1]);
-        } catch (NumberFormatException e)
-        {
+        } catch (NumberFormatException e) {
             System.out.println("Invalid age. Please enter a valid number.");
             return;
         }

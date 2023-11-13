@@ -8,7 +8,7 @@ package unit02;
 public class Logic
 {
 
-    public static void main(String[] args)
+    public static void run(String[] args)
     {
         Car newCar = new Car("White", "Sedan");
 
@@ -20,8 +20,7 @@ public class Logic
         System.out.printf("New Colour: ");
         System.out.printf(newCar.getColour());
 
-        for (int control = 10; control > 0; control--)
-        {
+        for (int control = 10; control > 0; control--) {
             System.out.println("Iteration: " + control);
         }
 

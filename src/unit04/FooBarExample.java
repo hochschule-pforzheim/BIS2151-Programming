@@ -12,8 +12,7 @@ public class FooBarExample
     {
         int foo = 8;
         int bar = 3;
-        for (int i = 0; i < 10; i++)
-        {
+        for (int i = 0; i < 10; i++) {
             takeTwo(foo + i, bar + i);
         }
     }

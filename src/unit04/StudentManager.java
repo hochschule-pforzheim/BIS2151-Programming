@@ -8,7 +8,7 @@ package unit04;
 public class StudentManager
 {
 
-    public static void main(String[] args)
+    public static void run()
     {
         // Create Student and let it study
         Student studentOne = new Student();
