@@ -19,6 +19,7 @@ public class StudentStorage
         Student[] myStudents = {studentOne, studentTwo, studentThree};
 
         Student studentFour = new Student(300003, "Ross", "Tina");
+        
         // This will throw a ArrayIndexOutOfBoundsException:
         // myStudents[3] = studentFour;
     }

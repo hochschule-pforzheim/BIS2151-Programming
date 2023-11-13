@@ -84,4 +84,14 @@ public class Student
         this.state = state;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Student{"
+                + "surname='" + this.surname + '\''
+                + "prename='" + this.prename + '\''
+                + ", semester=" + this.actualSemester
+                + ", studentID=" + this.studentID
+                + '}';
+    }
 }
