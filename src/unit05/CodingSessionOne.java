@@ -7,9 +7,11 @@ package unit05;
  */
 public class CodingSessionOne
 {
-    public void solution()
+    public static void run()
     {
         char[] words = {'H', 'E', 'L', 'L', 'O'};
+        // Alternatively
+        String[] wordString = {"H", "E", "L", "L", "O"};
         words[4] = '0';
         System.out.println(words);
     }

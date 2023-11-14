@@ -1,7 +1,5 @@
 package university;
 
-import java.util.Date;
-
 /**
  * Example Student Class for the Lecture
  *
@@ -10,26 +8,51 @@ import java.util.Date;
 public class Student
 {
 
+    public static int studentCounter;
     private int studentID;
-    private String surname;
-    private String prename;
-    public Date birthdate;
-    private int actualSemester;
-    public char state;
+    private String surname, prename;
+    private String courseOfStudies;
+    private byte actualSemester;
+    private double averageGrading;
+
+    public Student()
+    {
+        // Default constructor
+        System.out.println("Using the default constructor.");
+    }
+
+    public Student(int studentID, String surname, String prename)
+    {
+        this.studentID = studentID;
+        this.surname = surname;
+        this.prename = prename;
+    }
+
+    public Student(int studentID, String surname, String prename, byte actualSemester)
+    {
+        this.studentID = studentID;
+        this.surname = surname;
+        this.prename = prename;
+        this.actualSemester = actualSemester;
+    }
 
     public void study(int hoursOfStudy)
     {
-        System.out.println("Studying ...");
-    }
+        if (hoursOfStudy < 25) {
+            for (int x = hoursOfStudy; x >= 0; x--) {
+                if (x == 0) {
+                    System.out.println("Finished studying.");
+                } else if (x == 1) {
+                    System.out.println("Studying ... " + x + " hour to go.");
+                } else {
+                    System.out.println("Studying ... " + x + " hours to go.");
+                }
 
-    public String getSurname()
-    {
-        return surname;
-    }
+            }
+        } else {
+            System.out.println("You are crazy studying more than a day in a row!");
+        }
 
-    public void setSurname(String surname)
-    {
-        this.surname = surname;
     }
 
     public String getPrename()
@@ -42,19 +65,14 @@ public class Student
         this.prename = prename;
     }
 
-    public int getActualSemester()
+    public String getSurname()
     {
-        return actualSemester;
+        return surname;
     }
 
-    public void setActualSemester(int newSemester)
+    public void setSurname(String surname)
     {
-        this.actualSemester = newSemester;
-    }
-
-    public void nextSemester()
-    {
-        this.actualSemester++;
+        this.surname = surname;
     }
 
     public int getStudentID()
@@ -62,36 +80,39 @@ public class Student
         return studentID;
     }
 
-    public Student()
-    {
-        // This is the null/default constructor
-    }
-
-    public Student(int studentID, String surname, String prename)
+    public void setStudentID(int studentID)
     {
         this.studentID = studentID;
-        this.surname = surname;
-        this.prename = prename;
     }
 
-    public Student(int studentID, String surname, String prename, Date birthdate, int actualSemester, char state)
+    public byte getActualSemester()
     {
-        this.studentID = studentID;
-        this.surname = surname;
-        this.prename = prename;
-        this.birthdate = birthdate;
+        return actualSemester;
+    }
+
+    public void setActualSemester(byte actualSemester)
+    {
         this.actualSemester = actualSemester;
-        this.state = state;
     }
 
-    @Override
-    public String toString()
+    public String getCourseOfStudies()
     {
-        return "Student{"
-                + "surname='" + this.surname + '\''
-                + "prename='" + this.prename + '\''
-                + ", semester=" + this.actualSemester
-                + ", studentID=" + this.studentID
-                + '}';
+        return courseOfStudies;
     }
+
+    public void setCourseOfStudies(String courseOfStudies)
+    {
+        this.courseOfStudies = courseOfStudies;
+    }
+
+    public double getAverageGrading()
+    {
+        return averageGrading;
+    }
+
+    public void setAverageGrading(double averageGrading)
+    {
+        this.averageGrading = averageGrading;
+    }
+
 }
