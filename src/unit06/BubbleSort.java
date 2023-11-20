@@ -20,12 +20,14 @@ public class BubbleSort
     {
         int outer, inner, temp;
         boolean swapped;
-        for (outer = 0; outer < size - 1; outer++) {
+        for (outer = 0; outer < size - 1; outer++) 
+        {
             swapped = false;
-            for (inner = 0; inner < size - outer - 1; inner++) {
-                if (arr[inner] > arr[inner + 1]) {
-
-                    // Swap arr[j] and arr[j+1]
+            for (inner = 0; inner < size - outer - 1; inner++) 
+            {
+                if (arr[inner] > arr[inner + 1]) 
+                {
+                    // Swap arr[inner] and arr[inner+1]
                     temp = arr[inner];
                     arr[inner] = arr[inner + 1];
                     arr[inner + 1] = temp;
@@ -34,7 +36,8 @@ public class BubbleSort
             }
 
             // If no two elements were swapped by inner loop, then break
-            if (swapped == false) {
+            if (swapped == false) 
+            {
                 break;
             }
         }
