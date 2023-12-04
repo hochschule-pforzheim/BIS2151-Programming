@@ -5,7 +5,7 @@ package unit08;
  *
  * @author Andreas Schneider
  */
-public class Dog extends Canine
+public class Dog extends Canine implements Pet
 {
 
     /**
@@ -15,5 +15,17 @@ public class Dog extends Canine
     public void roam()
     {
         System.out.println("Roaming in a group!");
+    }
+
+    @Override
+    public void beFriendly()
+    {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void play()
+    {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
