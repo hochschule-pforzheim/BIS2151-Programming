@@ -18,7 +18,6 @@ public class Lecture
         // unit05.StudentStorage.run();
         // unit05.WrapperExample.run();
         // unit05.CodingSessionOne.run();
-        
         // ===== UNIT 6 =====
         // Bubble Sort Section
         /*
@@ -27,11 +26,9 @@ public class Lecture
         unit06.BubbleSort.run(demoArray, length);
         System.out.println("Sorted array: ");
         unit06.BubbleSort.printArray(demoArray, length);
-        */
-        
+         */
         // ===== UNIT 8 =====
         // unit08.MakeAnimal.run();
-        
         // ===== STUDENT MANAGER =====
         // StudentManager.run();
         // StudentManager.printStudents();
@@ -41,7 +38,8 @@ public class Lecture
         // With Exception
         // StudentManager.errorStudentException(-3);
         //StudentManager.helloStudent();
-
+        // Knapsack Problem
+        unit12.KnapsackProblem.run();
     }
 
     public static void explicitConv()
