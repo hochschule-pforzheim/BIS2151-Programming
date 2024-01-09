@@ -37,7 +37,7 @@ public class DynamicApproach
         return maxResult;
     }
 
-    public static void main(String[] args)
+    public static void run()
     {
         // Example usage:
         // Create a list of activities and call the function
