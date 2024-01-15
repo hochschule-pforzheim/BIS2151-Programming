@@ -39,7 +39,8 @@ public class Lecture
         // StudentManager.errorStudentException(-3);
         //StudentManager.helloStudent();
         // Knapsack Problem
-        unit12.KnapsackProblem.run();
+        // unit12.KnapsackProblem.run();
+        unit13.DatabaseManager.connect("PostgreSQL");
     }
 
     public static void explicitConv()
