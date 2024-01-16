@@ -40,7 +40,8 @@ public class Lecture
         //StudentManager.helloStudent();
         // Knapsack Problem
         // unit12.KnapsackProblem.run();
-        unit13.DatabaseManager.connect("PostgreSQL");
+        // unit13.DatabaseManager.connect("PostgreSQL");
+        unit14.AnonymousClassExample.run();
     }
 
     public static void explicitConv()
