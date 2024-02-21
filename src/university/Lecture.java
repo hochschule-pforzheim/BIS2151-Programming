@@ -42,7 +42,8 @@ public class Lecture
         // unit12.KnapsackProblem.run();
         // unit13.DatabaseManager.connect("PostgreSQL");
         // unit14.AnonymousClassExample.run();
-        unit15.TaskThreeComment.run();
+        // unit15.TaskThreeComment.run();
+        exam.ExamTaskThree.test();
     }
 
     public static void explicitConv()
