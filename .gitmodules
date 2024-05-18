@@ -4,3 +4,7 @@
 [submodule "BIS2151-Examples"]
 	path = BIS2151-Examples
 	url = https://github.com/hochschule-pforzheim/BIS2151-Examples
+[submodule "BIS2151-Tutorial"]
+	path = BIS2151-Tutorial
+	url = https://github.com/hochschule-pforzheim/BIS2151-Tutorial
+	branch = main
