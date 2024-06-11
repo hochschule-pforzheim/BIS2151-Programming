@@ -20,6 +20,7 @@ public class SerializationExample
         {
             oos.writeObject(person);
             System.out.println("Object serialized successfully");
+            oos.close();
         } catch (IOException e)
         {
             e.printStackTrace();
@@ -30,6 +31,7 @@ public class SerializationExample
         {
             Person deserializedPerson = (Person) ois.readObject();
             System.out.println("Object deserialized successfully: " + deserializedPerson);
+            ois.close();
         } catch (IOException | ClassNotFoundException e)
         {
             e.printStackTrace();
