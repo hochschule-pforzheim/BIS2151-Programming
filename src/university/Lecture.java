@@ -18,6 +18,8 @@ public class Lecture
         // unit05.StudentStorage.run();
         // unit05.WrapperExample.run();
         // unit05.CodingSessionOne.run();
+        unit05.StudentManager.run();
+
         // ===== UNIT 6 =====
         // Bubble Sort Section
         /*
@@ -43,7 +45,7 @@ public class Lecture
         // unit13.DatabaseManager.connect("PostgreSQL");
         // unit14.AnonymousClassExample.run();
         // unit15.TaskThreeComment.run();
-        exam.ExamTaskThree.test();
+        // exam.ExamTaskThree.test();
     }
 
     public static void explicitConv()

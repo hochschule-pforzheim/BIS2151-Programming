@@ -12,12 +12,10 @@ package unit04;
 public class Lecture04
 {
 
-    /*
-     * This is the main method, which is the entry point for any Java application.
-     * When you run a Java program, the instructions inside this method are executed.
-     * 'String[] args' represents an array of command-line arguments that the program can accept when run.
+    /**
+     * Method for running our code of Lecture 04
      */
-    public static void main(String[] args)
+    public static void run()
     {
         // This line calls the run method from another class called 'Foobar'.
         // You would need to define the 'Foobar' class for this to work.
