@@ -10,7 +10,7 @@ import java.io.*;
 public class SerializationExample
 {
 
-    public static void run(String[] args)
+    public static void run()
     {
         // Object to be serialized
         Person person = new Person("John Doe", 30);

@@ -1,10 +1,15 @@
 package university;
 
 /**
- * Central Class for starting different methods within the project
+ * Central Class for initiating various methods within the project. This class
+ * serves as the entry point for running different modules and exercises in the
+ * project, each corresponding to a specific unit or topic.
  *
- * @author Andreas Schneider
- * @version 1.0
+ * Units and examples are organised by comments, and methods can be individually
+ * enabled or disabled as needed.
+ *
+ * @version 2.0
+ * @author Andreas R. Schneider
  */
 public class Lecture
 {
@@ -18,44 +23,38 @@ public class Lecture
         // unit05.StudentStorage.run();
         // unit05.WrapperExample.run();
         // unit05.CodingSessionOne.run();
-        unit05.StudentManager.run();
-
+        // unit05.StudentManager.run();
         // ===== UNIT 6 =====
-        // Bubble Sort Section
-        /*
-        int demoArray[] = {64, 34, 25, 120, 22, 11, 90};
-        int length = demoArray.length;
-        unit06.BubbleSort.run(demoArray, length);
-        System.out.println("Sorted array: ");
-        unit06.BubbleSort.printArray(demoArray, length);
-         */
+        unit06.University.run();
+        unit06.University.sortArrayList();
+        unit06.University.roundingExample(99);
+        unit06.ExplicitConversion.run();
+
+        // ===== UNIT 7 =====
+        // still to be defined.
         // ===== UNIT 8 =====
         // unit08.MakeAnimal.run();
+        // ===== UNIT 11 =====
+        // unit11.SerializationExample.run();
+        // ===== UNIT 12 =====
+        // unit12.GreedyApproach.run();
+        // unit12.DynamicApproach.run();
+        // unit12.KnapsackProblem.run();
+        // ===== UNIT 13 =====
+        // unit13.DatabaseManager.connect("PostgreSQL");
+        // ===== UNIT 14 =====
+        // unit14.AnonymousClassExample.run();
+        // ===== UNIT 15 =====
+        // unit15.TaskThreeComment.run();
         // ===== STUDENT MANAGER =====
         // StudentManager.run();
         // StudentManager.printStudents();
         // StudentManager.printOutAllStudents();
         // StudentManager.printSpecificStudent(0);
         // StudentManager.printSpecificStudent(-3);
-        // With Exception
         // StudentManager.errorStudentException(-3);
-        //StudentManager.helloStudent();
-        // Knapsack Problem
-        // unit12.KnapsackProblem.run();
-        // unit13.DatabaseManager.connect("PostgreSQL");
-        // unit14.AnonymousClassExample.run();
-        // unit15.TaskThreeComment.run();
+        // StudentManager.helloStudent();
+        // ===== EXAM EXAMPLE =====
         // exam.ExamTaskThree.test();
-    }
-
-    public static void explicitConv()
-    {
-        int higherNumber = 120;
-        byte smallerNumber = (byte) higherNumber;
-
-        float sumRandomNumber = 45000.32f;
-        double interestingNumber = sumRandomNumber;
-        int numberOne = (int) sumRandomNumber;
-
     }
 }

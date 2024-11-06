@@ -20,8 +20,10 @@ public class GreedyApproach
         int currentEndTime = Integer.MIN_VALUE;
         int result = 0;
 
-        for (Activity activity : activities) {
-            if (currentEndTime < activity.startTime) {
+        for (Activity activity : activities)
+        {
+            if (currentEndTime < activity.startTime)
+            {
                 result++;
                 currentEndTime = activity.endTime;
             }
@@ -30,7 +32,7 @@ public class GreedyApproach
         return result;
     }
 
-    public static void run(String[] args)
+    public static void run()
     {
         // Example usage: Create a list of activities and call the function
         List<Activity> activities = List.of(
