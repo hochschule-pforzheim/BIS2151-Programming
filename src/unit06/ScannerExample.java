@@ -19,6 +19,7 @@ public class ScannerExample
         // read by next() function
         String str1 = scan.next();
 
+
         // print String
         System.out.println("Entered String str1 : " + str1);
 
