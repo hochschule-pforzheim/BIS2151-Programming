@@ -25,15 +25,17 @@ public class Lecture
         // unit05.CodingSessionOne.run();
         // unit05.StudentManager.run();
         // ===== UNIT 6 =====
-        unit06.University.run();
-        unit06.University.sortArrayList();
-        unit06.University.roundingExample(99);
-        unit06.ExplicitConversion.run();
+        // unit06.University.run();
+        // unit06.University.sortArrayList();
+        // unit06.University.roundingExample(99);
+        // unit06.ExplicitConversion.run();
 
         // ===== UNIT 7 =====
         // still to be defined.
         // ===== UNIT 8 =====
         // unit08.MakeAnimal.run();
+        // ===== UNIT 10 =====
+        unit10.Examples.go(100);
         // ===== UNIT 11 =====
         // unit11.SerializationExample.run();
         // ===== UNIT 12 =====
