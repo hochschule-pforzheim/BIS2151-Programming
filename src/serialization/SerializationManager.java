@@ -21,7 +21,8 @@ public class SerializationManager
      */
     public static void serializeStudent(Student student)
     {
-        try {
+        try
+        {
             FileOutputStream fos = new FileOutputStream("students.ser");
             System.out.println("File students.ser hast been created.");
 
@@ -34,10 +35,12 @@ public class SerializationManager
             oos.close();
             fos.close();
             System.out.println("Output stream closed.");
-        } catch (IOException ex) {
+        } catch (IOException ex)
+        {
             // Create a local file as a backup
             System.out.println(ex.getMessage());
-        } finally {
+        } finally
+        {
             // possible enchancement using a local file instead of e.g., a database
         }
     }
@@ -61,7 +64,8 @@ public class SerializationManager
      */
     public static Student deserializeStudent()
     {
-        try {
+        try
+        {
             // Creating a File Input Stream
             FileInputStream fis = new FileInputStream("students.ser");
             System.out.println("File Input Stream enabled.");
@@ -78,15 +82,18 @@ public class SerializationManager
             ois.close();
             fis.close();
             return readStudent;
-        } catch (IOException ex) {
+        } catch (IOException ex)
+        {
             // If an IOException occurs, return null
             return null;
 
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException ex)
+        {
             // If the class has not been found, throw an exception and log.
             Logger.getLogger(SerializationManager.class.getName()).log(Level.SEVERE, null, ex);
             return null;
-        } finally {
+        } finally
+        {
             return new Student();
         }
     }

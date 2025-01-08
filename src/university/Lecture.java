@@ -29,13 +29,12 @@ public class Lecture
         // unit06.University.sortArrayList();
         // unit06.University.roundingExample(99);
         // unit06.ExplicitConversion.run();
-
         // ===== UNIT 7 =====
         // still to be defined.
         // ===== UNIT 8 =====
         // unit08.MakeAnimal.run();
         // ===== UNIT 10 =====
-        unit10.Examples.go(100);
+        // unit10.Examples.go(100);
         // ===== UNIT 11 =====
         // unit11.SerializationExample.run();
         // ===== UNIT 12 =====
@@ -58,5 +57,8 @@ public class Lecture
         // StudentManager.helloStudent();
         // ===== EXAM EXAMPLE =====
         // exam.ExamTaskThree.test();
+        
+        // ===== SERIALIZATION EXAMPLE =====
+        serialization.Serialization.run();
     }
 }
